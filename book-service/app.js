@@ -10,13 +10,17 @@ app.use(async (ctx, next) => {
 })
 
 // add routes:
-router.get('/', async (ctx, next) => {
-  ctx.response.body = '<h1>Index</h1>'
+router.get('/health', async (ctx, next) => {
+  ctx.response.body = {
+    status: 'UP'
+  }
 })
 
-router.get('/json', async (ctx, next) => {
+router.get('/book/:id', async (ctx, next) => {
   ctx.response.body = {
-    statement: 'ssss'
+    bookId: ctx.params.id,
+    authorId: "1",
+    description: "This is a book."
   }
 })
 
