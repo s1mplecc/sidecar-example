@@ -11,6 +11,4 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:9090/eureka/
 sidecar:
   port: 3000
-  home-page-uri: http://localhost:${sidecar.port}/
   health-uri: http://localhost:${sidecar.port}/health
-
