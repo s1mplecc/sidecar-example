@@ -13,9 +13,14 @@ public class AuthorController {
     private BookServiceClient bookServiceClient;
 
     @GetMapping("/book/{bookId}/author")
-    public Author getAuthor(@PathVariable String bookId){
+    public Author getAuthor(@PathVariable String bookId) {
         Book book = bookServiceClient.getBook(bookId);
-        return new Author(book.getAuthorId(),"Jack");
+        return new Author(book.getAuthorId(), "Jack");
+    }
+
+    @GetMapping("/author/{authorId}")
+    public String getAuthorDescription(@PathVariable String authorId) {
+        return "This is a author description of " + authorId;
     }
 
 }
