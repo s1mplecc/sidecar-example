@@ -20,7 +20,7 @@ public class AuthorController {
 
     @GetMapping("/author/{authorId}")
     public String getAuthorDescription(@PathVariable String authorId) {
-        return "This is a author description of " + authorId;
+        return "This is an author description of " + authorId;
     }
 
 }

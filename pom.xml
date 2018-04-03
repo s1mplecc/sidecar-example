@@ -12,6 +12,7 @@
         <module>eureka-server</module>
         <module>author-service</module>
         <module>node-sidecar</module>
+        <module>api-gateway</module>
     </modules>
 
     <parent>
