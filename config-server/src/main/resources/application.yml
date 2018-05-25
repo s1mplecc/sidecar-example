@@ -1,5 +1,5 @@
 server:
-  port: 9093
+  port: 8888
 spring:
   application:
     name: config-server
@@ -7,9 +7,7 @@ spring:
     config:
       server:
         git:
-          uri:
-          username:
-          password:
+          uri: https://github.com/s1mpleinfo/config-repo
 eureka:
   instance:
     hostname: localhost

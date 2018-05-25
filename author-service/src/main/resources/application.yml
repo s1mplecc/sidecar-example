@@ -1,11 +1,6 @@
-server:
-  port: 9092
 spring:
-  application:
-    name: author-service
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:9090/eureka/
+  cloud:
+    config:
+      uri: http://127.0.0.1:8888
+      name: author
+      profile: dev
